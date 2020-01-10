@@ -16,22 +16,18 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            // margin:0 px;
+            
 
               &-left{
                 width: 60px;
-                // background-color: red;
                 float: left;
-                // height: 100%;
                 color: #ffffff;
                 
 
               }
               &-right{
                 width: 60px;
-                // background-color: red;
                 float: right;
-                // height: 100%;
                 &-icons{
                   display: flex;
                   justify-content: space-between;
