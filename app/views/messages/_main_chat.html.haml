@@ -1,0 +1,26 @@
+.chat
+  .chat-top
+    .chat-top-left
+      .chat-top-left-current Test
+      .chat-top-left-member Member : Taka
+    .chat-top-right Edit
+  .chat-main
+    .chat-main-message
+      .chat-main-message-top
+        .chat-main-message-top-name
+          taka
+        .chat-main-message-top-date
+          2020/01/10(Fri) 17:00:00
+      .chat-main-message-text
+        おはよう
+
+  .chat-bottom
+    .chat-bottom-message
+      %div.chat-bottom-message-box
+        %input{name: "message[content]", class:"chat-bottom-message-box-text",placeholder: "type a message", type:"text"}/
+        %label.chat-bottom-message-box-label  
+          =link_to '#' do
+            =icon('fas','image',class:'iconn')
+      
+      %input{name: "commit",class: "chat-bottom-message-submit", type: "submit", value: "Send"}/
+        

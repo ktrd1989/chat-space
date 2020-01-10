@@ -1,0 +1,77 @@
+.side{
+  &-top{
+      display: flex;
+      align-items: center;
+      width: 300px;
+      height: 100px;
+      background-color: #253141;      
+      
+      &-box{
+        width:100%;
+        height:20px;
+        background:#333333;
+        margin:0 20px;
+
+          &-center{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            
+
+              &-left{
+                width: 60px;
+                float: left;
+                color: #ffffff;
+                
+
+              }
+              &-right{
+                width: 60px;
+                float: right;
+                &-icons{
+                  display: flex;
+                  justify-content: space-between;
+                  
+                  a{
+                    color: #ffffff;
+                    
+                  }
+                  
+                  &-user{
+                    margin-right: 13px;
+
+                  }
+                  &-groups{
+                    
+                    
+                  }
+                }
+              }
+          }
+      }
+  }
+  &-list{
+    width: 300px;
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 40px;
+    &-group{
+      margin-bottom: 40px;
+    }
+      &-name{
+      margin-bottom: 5px;
+      font-size: 15px;
+       
+    }
+      &-message{
+        font-size: 11px;
+      
+    }
+  }
+}
+
+
+
