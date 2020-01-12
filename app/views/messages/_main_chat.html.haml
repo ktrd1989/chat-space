@@ -3,7 +3,9 @@
     .chat-top-left
       .chat-top-left-current Test
       .chat-top-left-member Member : Taka
-    .chat-top-right Edit
+    .chat-top-right 
+      = link_to "Edit",edit_group_path(1),class:"edit" 
+               
   .chat-main
     .chat-main-message
       .chat-main-message-top
