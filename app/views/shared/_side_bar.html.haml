@@ -1,20 +1,43 @@
-.side-bar
-  .header
-    %h3.header__name
-      = current_user.name
-    %ul.header__lists
-      = link_to new_group_path do
-        %li.list
-          =link_to new_group_path(current_user)  do
-            = icon('fas', 'pen-square', class: 'icon')
-        %li.list
-          = link_to edit_user_path(current_user) do
-            = icon('fas', 'cog', class: 'icon')
-  .groups
+-# .side-bar
+-#   .header
+-#     %h3.header__name
+-#       = current_user.name
+-#     %ul.header__lists
+-#       = link_to new_group_path do
+-#         %li.list
+-#           =link_to new_group_path(current_user)  do
+-#             = icon('fas', 'pen-square', class: 'icon')
+-#         %li.list
+-#           = link_to edit_user_path(current_user) do
+-#             = icon('fas', 'cog', class: 'icon')
+-#   .groups
+-#     - current_user.groups.each do |group|
+-#       .group
+-#         = link_to '#' do
+-#           .group__name
+-#             = group.name
+-#           .group__message
+-#             メッセージはまだありません。
+
+.side
+  .side-top
+    .side-top-box
+      .side-top-box-center
+        .side-top-box-center-left= current_user.name
+        .side-top-box-center-right
+          = link_to new_group_path do
+            .side-top-box-center-right-icons
+              .side-top-box-center-right-icons-user
+                =link_to new_group_path(current_user)  do
+                  =icon('fas','edit',class:'icon')
+              .side-top-box-center-right-icons-groups
+                = link_to edit_user_path(current_user) do
+                  = icon('fas', 'cog', class: 'icon')
+  .side-list
     - current_user.groups.each do |group|
-      .group
-        = link_to '#' do
-          .group__name
+      .side-list-group
+        = link_to group_messages_path(group) do
+          .side-list-name 
             = group.name
-          .group__message
-            メッセージはまだありません。
+          .side-list-message 
+            = group.show_last_message
