@@ -58,6 +58,9 @@ $('#new_message').on('submit', function(e){
     $('form')[0].reset();
     $(".chat-bottom-message-submit").prop('disabled',false);
       })
+      .always(function(){
+        $(".chat-bottom-message-submit").prop('disabled',false);
+        })
       .fail(function() {
         alert("メッセージ送信に失敗しました");
     });
