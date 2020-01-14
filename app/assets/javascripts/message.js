@@ -60,10 +60,8 @@ $('#new_message').on('submit', function(e){
       .fail(function() {
         alert("メッセージ送信に失敗しました");
     });
-      
+  .always(function(){
+    $(".chat-bottom-message-submit").prop('disabled',false);
+    })
 })
-.always(function(){
-  $(".chat-bottom-message-submit").prop('disabled',false);
-  })
-
 });
