@@ -24,7 +24,6 @@
         }
         &-member{
           height: 40px;
-          line-height: 40px;
           display: flex;
           font-size: 12px;
           color: #999999;
@@ -53,6 +52,7 @@
       background-color: #fafafa;
       float: right;
       overflow: scroll;
+      padding: 46px 40px;
       &-message{
         padding-bottom: 40px;
         overflow: scroll;
@@ -142,4 +142,9 @@
 }
 .iconn{
   color:#000000;
+}
+
+.chat-top-right > a{
+  color: #38aef0;
+  text-decoration: none;
 }

@@ -72,8 +72,8 @@ $(function(){
         insertHTML += buildHTML(message)
       });
       //メッセージが入ったHTMLに、入れ物ごと追加
-      $('.chat-main-message').append(insertHTML);
-      $('.chat-main-message').animate({ scrollTop: $('.chat-main-message')[0].scrollHeight});
+      $('.chat-main').append(insertHTML);
+      $('.chat-main').animate({ scrollTop: $('.chat-main')[0].scrollHeight});
       $("#new_message")[0].reset();
       $(".chat-bottom-message-submit").prop("disabled", false);
     }
